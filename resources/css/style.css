@@ -1,3 +1,8 @@
+
+/* ------------------------------------------------------------- */
+/* BASIC SETUP */
+/* ------------------------------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,31 +13,22 @@
 html {
     background-color: #fff;
     color: #555;
-    font-family: 'Lato','Arial', sans-serif;
+    font-family: 'Lato','Arial', sans-serif; /* If a font is not found go to the next and so on, the last is any sans-serif font */
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
 }
+
+/* ------------------------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------------------------- */
 
 .row {
     max-width: 1140px;
     margin: 0 auto;
 }
 
-header {
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)), url(img/vaporwave.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-
-.hero-text-box{
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-20%, -230%);
-}
+/* ---- HEADINGS ---- */
 
 h1 {
     margin: 0;
@@ -45,7 +41,9 @@ h1 {
     word-spacing: 4px;
 }
 
-.btn:link, 
+/* ---- BUTTONS ---- */
+
+.btn:link, /* visited is when the button has been already pressed */
 .btn:visited {
     display: inline-block;
     padding: 10px 30px;
@@ -53,12 +51,12 @@ h1 {
     text-decoration: none;
     border-radius: 200px;
     color: #fff;
-    transition: background-color 0.4s, border 0.4s, color 0.4s;
+    transition: background-color 0.4s, border 0.4s, color 0.4s; /* the color fade animation when hovering the buttons */
 }
 
 .btn-full:link,
 .btn-full:visited{
-    background-color: #a971c0;
+    background-color: #a971c0; /* https://flatuicolors.com */
     border: 1px solid #a971c0;
     margin-right: 10px;
 }
@@ -76,7 +74,7 @@ h1 {
 
 .btn-full:hover,
 .btn-full:active{
-    border: 1px solid #a971c0;
+    border: 1px solid #a971c0; /* Use http://www.0to255.com */
 }
 
 .btn-ghost:hover,
@@ -85,4 +83,22 @@ h1 {
     color: #fff;
 }
 
+/* ------------------------------------------------------------- */
+/* HEADER */
+/* ------------------------------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)), url(img/vaporwave.jpg); /* gradient creates a fading on the image between 2 colors from top to bottom */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* 100% after viewport */
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -230%);
+}
 

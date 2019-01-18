@@ -196,4 +196,56 @@ header {
     border-bottom: 2px solid #a971c0;
 }
 
+/* ------------------------------------------------------------- */
+/* FEATURES */
+/* ------------------------------------------------------------- */
+
+.section-features .long-copy {
+    margin-bottom: 20px;
+}
+
+
+/* ------------------------------------------------------------- */
+/* GENRES */
+/* ------------------------------------------------------------- */
+
+.sections-genres {
+    padding: 0;
+}
+
+.genres-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.genres-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.genre-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000; /* behind the images */
+}
+
+.genre-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15); /* Images will be 15% bigger, by putting overflow: hidden, the excess is not visible */
+    transition: transform 0.5s, opacity 0.5s; /* animation */
+}
+
+.genre-photo img:hover {
+    transform: scale(1.03); /* Images go back to normal but a little bigger to avoid the white space in the bottom */
+    opacity: 1;
+}
+
+
+
+
+
 

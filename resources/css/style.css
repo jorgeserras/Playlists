@@ -148,6 +148,7 @@ h2:after {
 
 header {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)), url(img/vaporwave.jpg); /* gradient creates a fading on the image between 2 colors from top to bottom */
+    /* パラダイス means paradise */
     background-size: cover;
     background-position: center;
     height: 100vh; /* 100% after viewport */
@@ -245,7 +246,23 @@ header {
 }
 
 
+/* ------------------------------------------------------------- */
+/* HOW IT WORKS */
+/* ------------------------------------------------------------- */
 
+.steps-box{
+    margin-top: 30px;
+}
 
+.steps-box:first-child{
+   text-align: right;
+    padding-right: 3%;
+}
 
+.steps-box:last-child{
+    padding-left: 3%;
+}
 
+.app-screen{
+    width: 40%;
+}

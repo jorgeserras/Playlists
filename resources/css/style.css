@@ -313,4 +313,41 @@ header {
 }
 
 
+/* ------------------------------------------------------------- */
+/* SONGS */
+/* ------------------------------------------------------------- */
+
+
+.box img,
+     iframe{ /* iframe for the youtube videos */
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    
+}
+
+.song-feature{
+    margin-bottom: 5px;
+}
+
+
+
+.section-songs a:link,
+.section-songs a:visited{
+    padding: 3px 0; /* for the distance between the words and the border-bottom */
+    color: #cc88e6;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 400;
+    border-bottom: 2px solid transparent; /* the border is already there but not visible */
+    transition: border-bottom 0.4s; /* animation */
+}
+
+.section-songs a:hover,
+.section-songs a:active{
+    border-bottom: 2px solid #a971c0;
+}
+
+
 

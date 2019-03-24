@@ -6,16 +6,19 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-html {
+html,
+body {
     background-color: #fff;
     color: #555;
     font-family: 'Lato','Arial', sans-serif; /* If a font is not found go to the next and so on, the last is any sans-serif font */
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 /* THe clearfix clears some floats that prevented margin between objects, its applied to the showcases */
@@ -133,6 +136,7 @@ h2:after {
     text-decoration: none;
     border-radius: 200px;
     color: #fff;
+    -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
     transition: background-color 0.4s, border 0.4s, color 0.4s; /* the color fade animation when hovering the buttons */
 }
 
@@ -170,6 +174,7 @@ h2:after {
 /* ------------------------------------------------------------- */
 
 header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.6))), url(img/vaporwave.jpg);
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)), url(img/vaporwave.jpg); /* gradient creates a fading on the image between 2 colors from top to bottom */
     /* パラダイス means paradise */
     background-size: cover;
@@ -183,6 +188,7 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-20%, -230%);
     transform: translate(-20%, -230%);
 }
 
@@ -213,6 +219,7 @@ header {
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent; /* the border is already there but not visible */
+    -webkit-transition: border-bottom 0.4s;
     transition: border-bottom 0.4s; /* animation */
 }
 
@@ -260,11 +267,16 @@ header {
     opacity: 0.7;
     width: 100%;
     height: auto;
+    -webkit-transform: scale(1.15);
     transform: scale(1.15); /* Images will be 15% bigger, by putting overflow: hidden, the excess is not visible */
-    transition: transform 0.5s, opacity 0.5s; /* animation */
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; /* animation */
 }
 
 .genre-photo img:hover {
+    -webkit-transform: scale(1.03);
     transform: scale(1.03); /* Images go back to normal but a little bigger to avoid the white space in the bottom */
     opacity: 1;
 }
@@ -354,6 +366,7 @@ header {
     font-size: 90%;
     font-weight: 400;
     border-bottom: 2px solid transparent; /* the border is already there but not visible */
+    -webkit-transition: border-bottom 0.4s;
     transition: border-bottom 0.4s; /* animation */
 }
 
@@ -370,6 +383,7 @@ header {
 
 
 .section-quotes{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(img/monolith.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/monolith.jpg);
     background-size: cover;
     background-position: center;
@@ -408,6 +422,116 @@ cite img {
     margin-right: 10px;
     vertical-align: middle;
 }
+
+
+/* ------------------------------------------------------------- */
+/* RECONNOITRE */
+/* ------------------------------------------------------------- */
+
+.section-plans {
+    background-color: #f0f0f0;
+}
+
+
+.plan-box {
+    background-color: #ffff;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    -webkit-box-shadow: 0 2px 2px #d1d1d1;
+    box-shadow: 0 2px 2px #d1d1d1;
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child { 
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px; /* To curve the corners */
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child { /* To center the buttons */
+    text-align: center;
+    border: 0;
+}
+
+
+/* ------------------------------------------------------------- */
+/* DID NOT DO A CONTACT FORM */
+/* ------------------------------------------------------------- */
+
+
+
+
+
+/* ------------------------------------------------------------- */
+/* FOOTER */
+/* ------------------------------------------------------------- */
+
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+    font-size: 150%;
+}
+
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child{
+    margin: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.4s;
+    transition: color 0.4s;
+}
+
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active {
+    color: #fff;
+}
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 20px;
+}
+
+
+
+
+
 
 
 

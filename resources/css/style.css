@@ -180,7 +180,7 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh; /* 100% after viewport */
-   /* background-attachment: fixed; */
+    background-attachment: fixed; 
 }
 
 .hero-text-box{

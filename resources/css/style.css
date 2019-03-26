@@ -281,6 +281,7 @@ header {
 
 .section-features .long-copy {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 
@@ -352,7 +353,7 @@ header {
 }
 
 .app-screen{
-    width: 40%;
+    width: 60%;
 }
 
 .works-step{
